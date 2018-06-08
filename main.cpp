@@ -1,8 +1,21 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include "Dinosaurios.h"
+#include "carnivoros.h"
+#include "Herbivoros.h"
+#include "Triceraptor.h"
+#include "Spinosaurus.h"
+#include "Tyrannosaurus.h"
+#include "Aereos.h"
+#include "Marinos.h"
+#include "Omnivoros.h"
+#include "Oviraptor.h"
+#include "Cuidadores.h"
 
 using namespace std;
 int main(){
+	vector<Dinosaurios*>ListDino;
 	bool seguir=false;
 	while(seguir==false){
 		int opcion=0;
@@ -17,7 +30,7 @@ int main(){
 		int opcioninicio;
 		string nombredinosaurio, fechacreacion,sexodinosaurio;
 		int alturadinosaurio,pesodinosaurio,longituddinosaurio;
-		int opcionmodificar;
+		int opcionmodificar, opcionmodificarcuidadores;
 		cout<<"1. Agregar Dinosaurios"<<endl;
 		cout<<"2. Agregar Cuidadores"<<endl;
 		cout<<"3. Modificar Dinosaurio"<<endl;
@@ -40,6 +53,7 @@ int main(){
 				cin>>sexodinosaurio;
 				cout<<"Ingrese la longitud del dinosaurio: "<<endl;
 				cin>>longituddinosaurio;
+				ListDino.push_back(new Dinosaurios(nombredinosaurio,alturadinosaurio,pesodinosaurio,fechacreacion,sexodinosaurio,longituddinosaurio));
 				cout<<"DINOSAURIOS"<<endl;
 				cout<<"1. Carnivoros"<<endl;
 				cout<<"2. Herbivoros"<<endl;
@@ -184,16 +198,140 @@ int main(){
 						cout<<"Ingrese la longitud del dinosaurio: "<<endl;
 						cin>>longituddinosaurio;
 						break;
+					case 7:
+						cout<<"DINOSAURIOS"<<endl;
+						cout<<"1. Carnivoros"<<endl;
+						cout<<"2. Herbivoros"<<endl;
+						cout<<"3. Omnivoros"<<endl;
+						cout<<"4. Aereos"<<endl;
+						cout<<"5. Marinos"<<endl;
+						cout<<"Ingrese la opcion: "<<endl;
+						cin>>opcion;
+						switch (opcion) {
+							case 1:
+								cout<<"1. Trynnosaurus rex"<<endl;
+								cout<<"2. Spinosaurus"<<endl;
+								cout<<"Ingrese la opcion: "<<endl;
+								cin>>op1;
+								switch (op1){
+									case 1:
+										cout<<"Trynnosaurus rex"<<endl;
+										cout<<"Ingrese el organo depredador(dientes o garras): "<<endl;
+										cin>>depredador;
+										cout<<"Ingrese el tipo que es (cazador o carronero): "<<endl;
+										cin>>tipocarnivoro;
+										cout<<"Ingrese el numero de colmillos: "<<endl;
+										cin>>numdecolmillos;
+										cout<<"Ingrese el consumo diario de carne: "<<endl;
+										cin>>consumodiario;
+										break;
+									case 2:
+										cout<<"Spinosaurus"<<endl;
+										cout<<"Ingrese el organo depredador(dientes o garras): "<<endl;
+										cin>>depredador;
+										cout<<"Ingrese el tipo que es (cazador o carronero): "<<endl;
+										cin>>tipocarnivoro;
+										cout<<"Ingrese la altura de espina neural: "<<endl;
+										cin>>alturaespina;
+										cout<<"Ingrese la longitud de brazos: "<<endl;
+										cin>>longitudbrazos;
+										break;
+										}
+										break;
+							case 2:
+								cout<<"HERBIVOROS"<<endl;
+								cout<<"Ingrese el tipo de Herbivoros(frugivoros,folivoro): "<<endl;
+								cin>>tipoherviboro;
+								cout<<"Ingrese su numero de incisivos: "<<endl;
+								cin>>incisivos;
+								cout<<"TRICERATOPS"<<endl;
+								cout<<"Ingrese la longitud de cuerno: "<<endl;
+								cin>>longitudcuerno;
+								break;
+							case 3:
+								cout<<"OMNIVOROS"<<endl;
+								cout<<"Ingrese el numero de molares: "<<endl;
+								cin>>morales;
+								cout<<"Ingrese su numero de colmillos: "<<endl;
+								cin>>numdecolmillosomnivo;
+								cout<<"Ingrese la altura de su cresta: "<<endl;
+								cin>>alturacresta;
+								cout<<"Ingrese si tiene plumaje"<<endl;
+								cout<<"1. SI"<<endl;
+								cout<<"2. NO"<<endl;
+								cin>>intplumaje;
+								if(intplumaje==1){
+										plumaje=true;
+								}else{
+									  plumaje=false;
+								}
+								break;
+							case 4:
+								cout<<"VUELA"<<endl;
+								cout<<"Ingrese si vuela"<<endl;
+								cout<<"1. SI"<<endl;
+								cout<<"2. NO"<<endl;
+								cin>> intvuelaaereo;
+								if(intvuelaaereo==1){
+							 		vuelaaereo=true;
+								}else{
+									vuelaaereo=false;
+								}
+								cout<<"Ingrese si tiene plumaje"<<endl;
+								cout<<"1. SI"<<endl;
+								cout<<"2. NO"<<endl;
+								cin>>intplumasaereo;
+								if (intplumasaereo==1) {
+									plumasaereo=true;
+								}else{
+									plumasaereo=false;
+								}
+								break;
+							case 5:
+								cout<<"MARINOS"<<endl;
+								cout<<"Ingrese el numero de atletas: "<<endl;
+								cin>>numerodeatletas;
+								cout<<"Ingrese el tipo (Terrestre/Marino): "<<endl;
+								cin>>tipomarino;
+								break;
+						}
+						break;
 				}
 				break;
 			case 4:
 				cout<<"Modificar cuidadores"<<endl;
+				cout<<"1. El nombre: "<<endl;
+				cout<<"2. El ID: "<<endl;
+				cout<<"3. El sexo: "<<endl;
+				cout<<"4. La edad: "<<endl;
+				cin>>opcionmodificarcuidadores;
+				switch (opcionmodificarcuidadores) {
+					case 1:
+						cout<<"Ingrese el nombre: "<<endl;
+						cin>>nombrecuidador;
+						break;
+					case 2:
+						cout<<"Ingrese el ID: "<<endl;
+						cin>>idcuidador;
+						break;
+					case 3:
+						cout<<"Ingrese el sexo: "<<endl;
+						cin>>sexocuidador;
+						break;
+					case 4:
+						cout<<"Ingrese la edad: "<<endl;
+						cin>>edadcuidador;
+						break;
+
+				}
 				break;
 			case 5:
 				cout<<"Eliminar dinosaurio"<<endl;
+				//TODO hacer un for para eliminar DINOSAURIO
 				break;
 			case 6:
 				cout<<"Eliminar cuidadores"<<endl;
+				//TODO: hacer un for para eliminar cuidadores
 				break;
 			case 7:
 				seguir=true;
