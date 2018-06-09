@@ -14,8 +14,10 @@
 #include "Cuidadores.h"
 
 using namespace std;
+using std::string;
 int main(){
 	vector<Dinosaurios*>ListDino;
+	vector<Cuidadores*>ListCuida;
 	bool seguir=false;
 	while(seguir==false){
 		int opcion=0;
@@ -161,6 +163,7 @@ int main(){
 				cin>>sexocuidador;
 				cout<<"Ingrese la edad: "<<endl;
 				cin>>edadcuidador;
+				ListCuida.push_back(new Cuidadores(nombrecuidador,idcuidador,sexocuidador,edadcuidador));
 				break;
 			case 3:
 				cout<<"MODIFICAR DINOSAURIO"<<endl;
