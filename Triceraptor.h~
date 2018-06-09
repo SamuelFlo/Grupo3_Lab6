@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include "Dinosaurios.h"
 using namespace std;
+using std::string;
 
 #ifndef TRICERAPTOR_H
 #define TRICERAPTOR_H

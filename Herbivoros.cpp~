@@ -6,7 +6,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-Herbivoros::Herbivoros(string Tipo,int NumeroIncisivos):Dinosaurios(nombre, altura,peso,fecha,sexo,longitud){
+Herbivoros::Herbivoros(string nombre, int altura,int peso,string fecha,string sexo,int longitud,string Tipo,int NumeroIncisivos):Dinosaurios(nombre, altura,peso,fecha,sexo,longitud) {
 	this->Tipo=Tipo;
 	this->NumeroIncisivos=NumeroIncisivos;
 	this->nombre=nombre;
@@ -25,7 +25,7 @@ Herbivoros::Herbivoros(){
 	   this-> Tipo=Tipo;
 	 }
 }
-int Herbivoros::getTipo(){
+string Herbivoros::getTipo(){
    return Tipo;
 }
 void Herbivoros::setNumeroIncisivos(int NumeroIncisivos){
@@ -35,6 +35,6 @@ void Herbivoros::setNumeroIncisivos(int NumeroIncisivos){
 			cout<<"El numero de incisivos debe ser igual o mayor de 60"<<endl;   
    }
 }
-string Herbivoros::getNumeroIncisivos(){
+int Herbivoros::getNumeroIncisivos(){
    return NumeroIncisivos;
 }

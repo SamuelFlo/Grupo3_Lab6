@@ -6,7 +6,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-Herbivoros::Herbivoros(string Tipo,int NumeroIncisivos):Dinosaurios(nombre, altura,peso,fecha,sexo,longitud){
+Herbivoros::Herbivoros(string Tipo,int NumeroIncisivos):Dinosaurios(nombre, altura,peso,fecha,sexo,longitud) {
 	this->Tipo=Tipo;
 	this->NumeroIncisivos=NumeroIncisivos;
 	this->nombre=nombre;

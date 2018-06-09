@@ -101,8 +101,8 @@ int main(){
 						cout<<"TRICERATOPS"<<endl;
 						cout<<"Ingrese la longitud de cuerno: "<<endl;
 						cin>>longitudcuerno;
-						//Triceraptor* h = new Triceraptor(nombredinosaurio,alturadinosaurio,pesodinosaurio,fechacreacion,sexodinosaurio,longituddinosaurio,tipoherviboro,incisivos,longitudcuerno);
-						//ListDino.push_back(h);
+						Triceraptor* h = new Triceraptor(nombredinosaurio,alturadinosaurio,pesodinosaurio,fechacreacion,sexodinosaurio,longituddinosaurio,tipoherviboro,incisivos,longitudcuerno);
+						ListDino.push_back(h);
 						break;
 					case 3:
 						cout<<"OMNIVOROS"<<endl;

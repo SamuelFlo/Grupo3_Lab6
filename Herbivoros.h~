@@ -12,13 +12,13 @@ class Herbivoros: public Dinosaurios{
 		string Tipo;
 		int NumeroIncisivos;
 	public:
-		Herbivoros(string,string);
+		Herbivoros(string, int,int,string,string,int,string,int);
 		Herbivoros();
 		string getTipo();
 		void setTipo(string);
 
-		string getNumeroIncisivos();
-		void setNumeroIncisivos(string);
+		int getNumeroIncisivos();
+		void setNumeroIncisivos(int);
 
 };
 #endif

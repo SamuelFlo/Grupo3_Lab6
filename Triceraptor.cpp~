@@ -1,14 +1,20 @@
 #include "Triceraptor.h"
+#include "Dinosaurios.h"
+#include "Herbivoros.h"
+#include <string>
+#include <iostream>
+using namespace std;
+using std::string;
 
-Triceraptor::Triceraptor(int LongitudCuernos,int longitudCuerso):Dinosaurios(nombre,altura,peso,fecha,sexo,longitud){
+Triceraptor::Triceraptor(int LongitudCuernos,int longitudCuerso):Herbivoros(string Tipo,int NumeroIncisivos){
 	this->LongitudCuernos=LongitudCuernos;
 	this->longitudCuerso=longitudCuerso;
-	this->nombre=nombre;
+	/*this->nombre=nombre;
 	this->altura=altura;
 	this->peso=peso;
 	this->fecha=fecha;
 	this->sexo=sexo;
-	this->longitud=longitud;
+	this->longitud=longitud;*/
 }
 Triceraptor::Triceraptor(){
 
