@@ -1,9 +1,6 @@
 #include <iostream>
 #include <string>
-<<<<<<< HEAD
-=======
 #include <vector>
->>>>>>> 4e7bb699bc119763a29a2d440b94ff65cfd81569
 #include "Dinosaurios.h"
 #include "carnivoros.h"
 #include "Herbivoros.h"
@@ -14,16 +11,16 @@
 #include "Marinos.h"
 #include "Omnivoros.h"
 #include "Oviraptor.h"
-<<<<<<< HEAD
 #include <vector>
 
-=======
+
 #include "Cuidadores.h"
->>>>>>> 4e7bb699bc119763a29a2d440b94ff65cfd81569
 
 using namespace std;
+using std::string;
 int main(){
 	vector<Dinosaurios*>ListDino;
+	vector<Cuidadores*>ListCuida;
 	bool seguir=false;
 	while(seguir==false){
 		int opcion=0;
@@ -171,6 +168,7 @@ int main(){
 				cin>>sexocuidador;
 				cout<<"Ingrese la edad: "<<endl;
 				cin>>edadcuidador;
+				ListCuida.push_back(new Cuidadores(nombrecuidador,idcuidador,sexocuidador,edadcuidador));
 				break;
 			case 3:
 				cout<<"MODIFICAR DINOSAURIO"<<endl;
@@ -343,7 +341,112 @@ int main(){
 				cout<<"Eliminar cuidadores"<<endl;
 				//TODO: hacer un for para eliminar cuidadores
 				break;
-			case 7:
+				
+				
+				
+				
+				
+				
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+case 7:
+		cout<<"LISTAR DINOSAURIOS"<<endl;
+	for(int i=0;i<ListDino.size();i++){
+	cout<<ListDino[i]->getNombre()<<endl;
+	}
+	
+	break;
+	
+case 8:
+		cout<<"LISTAR Cuidadores"<<endl;
+	for(int i=0;i<ListCuida.size();i++){
+	cout<<ListCuida[i]->getNombre()<<endl;
+	}
+	break;
+			case 8:
 				seguir=true;
 				break;
 		}

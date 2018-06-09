@@ -1,6 +1,10 @@
 #include "Cuidadores.h"
+#include <string>
+#include <iostream>
+using namespace std;
+using std::string;
 
-Cuidadores::Cuidadores(string nombre,string id,string sexo,string Edad){
+Cuidadores::Cuidadores(string nombre,string id,string sexo,int Edad){
 	this->nombre=nombre;
 	this->id=id;
 	this->sexo=sexo;
@@ -8,7 +12,8 @@ Cuidadores::Cuidadores(string nombre,string id,string sexo,string Edad){
 }
 Cuidadores::Cuidadores(){
 
-}void Cuidadores::setNombre(string nombre){
+}
+void Cuidadores::setNombre(string nombre){
    this-> nombre=nombre;
 }
 string Cuidadores::getNombre(){

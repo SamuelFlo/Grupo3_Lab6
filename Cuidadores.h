@@ -3,7 +3,7 @@
 #include <vector>
 
 using namespace std;
-
+using std::string;
 #ifndef CUIDADORES_H
 #define CUIDADORES_H
 class Cuidadores{
@@ -11,7 +11,7 @@ class Cuidadores{
 		string nombre;
 		string id;
 		string sexo;
-		string Edad;
+		int Edad;
 	public:
 		Cuidadores(string,string,string,int);
 		Cuidadores();
@@ -24,7 +24,7 @@ class Cuidadores{
 		string getSexo();
 		void setSexo(string);
 
-		string getEdad();
+		int getEdad();
 		void setEdad(int);
 
 };
